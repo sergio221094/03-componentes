@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { DateTimePageRoutingModule } from './date-time-routing.module';
+
+import { DateTimePage } from './date-time.page';
+import { ComponentsModule } from 'src/app/components/components.module';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    DateTimePageRoutingModule,
+    ComponentsModule,
+    ReactiveFormsModule
+  ],
+  declarations: [DateTimePage]
+})
+export class DateTimePageModule {}

@@ -1,0 +1,21 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Datos de nacimiento</ion-label>
+    </ion-list-header>
+
+    <div [formGroup]="validationsForm">
+      <ion-item>
+        <ion-label>Fecha de nacimiento</ion-label>
+        <ion-input required type="text" name="date" formControlName="date" (click)="presentCalandarPopover($event);">
+        </ion-input>
+      </ion-item>
+    </div>
+
+  </ion-list>
+
+</ion-content>

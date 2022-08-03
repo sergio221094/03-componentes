@@ -29,5 +29,4 @@ export class LoadingPage implements OnInit {
     this.loading.present();
   }
 
-
 }

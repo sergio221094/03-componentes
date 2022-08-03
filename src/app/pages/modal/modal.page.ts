@@ -14,11 +14,17 @@ export class ModalPage implements OnInit {
   ngOnInit() {
   }
 
-  async mostrarModal(){
+  async mostrarModal() {
     const modal = await this.modalCtrl.create({
-      component: ModalInfoPage
+      component: ModalInfoPage,
+      componentProps: {
+        nombre: 'Sergio',
+        pais: 'Colombia'
+      }
     });
     await modal.present();
+    const { data } = await modal.onDidDismiss();
+    console.log(data);
   }
 
 }

@@ -17,6 +17,7 @@ export class ListPage implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.usuarios = this.dataService.getUsuarios();
   }
 
   favorite(user: any) {
@@ -32,6 +33,7 @@ export class ListPage implements OnInit {
   delete(user: any) {
     console.log('Delete: ' + user.name);
     this.ionList.closeSlidingItems();
+
   }
 
 

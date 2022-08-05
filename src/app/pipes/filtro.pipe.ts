@@ -1,12 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Album } from '../interfaces/interfaces';
 
 @Pipe({
   name: 'filtro'
 })
 export class FiltroPipe implements PipeTransform {
 
-  transform(arreglo: Album[], texto: string = '', columna: string = ''): Album[] {
+  transform(arreglo: any[], texto: string = '', columna: string = ''): any[] {
     if (texto === '') {
       return arreglo;
     }

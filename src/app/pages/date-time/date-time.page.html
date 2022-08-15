@@ -8,14 +8,19 @@
       <ion-label>Datos de nacimiento</ion-label>
     </ion-list-header>
 
-    <div [formGroup]="validationsForm">
+    <div>
       <ion-item>
         <ion-label>Fecha de nacimiento</ion-label>
-        <ion-input required type="text" name="date" formControlName="date" (click)="presentCalandarPopover($event);">
-        </ion-input>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
       </ion-item>
     </div>
-
   </ion-list>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime mode="ios" id="datetime" presentation="date" [preferWheel]="true" locale="es-ES"
+        [showDefaultButtons]="true"> </ion-datetime>
+    </ng-template>
+  </ion-modal>
 
 </ion-content>
